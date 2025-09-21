@@ -69,7 +69,7 @@
   position: relative;
   height: 100vh;
   background: url('images/img2.jpeg') center/cover no-repeat;
-  animation: slider 15s infinite;
+  animation: slider 10s infinite;
   display: flex;
   align-items: center;
   justify-content: center;
