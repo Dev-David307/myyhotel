@@ -18,3 +18,5 @@ prevBtn.addEventListener("click", () => {
 });
 
 updateBackground();
+
+
