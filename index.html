@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hotel</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -17,24 +17,23 @@
     </div>
     <div class="right">
       <a href="#" class="book-btn">Book Now</a>
-    </div>
+    </div>  
   </div>
 
+
+<header>
 <nav class="navbar">
-  <h2>Luxury City Hotel</h2>
-
-  <div class="hamburger" id="hamburger">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#">Home</a></li>
+<div class="logo">Luxury City Hotel</div>
+  <ul class="nav-links">
+     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="#">Rooms</a></li>
     <li><a href="#">Services</a></li>
     <li><a href="#">Gallery</a></li>
     <li><a href="#">Contact</a></li>
   </ul>
+  <div class="menu-toggle">&#9776;</div>
 </nav>
+</header>
 
 <div class="menu-overlay" id="menu-overlay"></div>
 
@@ -78,12 +77,13 @@
 
 <script src="script.js"></script>
 <script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("nav-links");
+  const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.textContent = navLinks.classList.contains('active') ? '✖' : '☰';
+    });
 </script>
 
 
