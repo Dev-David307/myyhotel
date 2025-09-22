@@ -338,7 +338,7 @@
 .hamburger {
   display: none;
 }
-/* Mobile */
+
 @media (max-width: 768px) {
   .hamburger { display: block; }
 
@@ -369,8 +369,6 @@
   .nav-links.active {
     max-height: 300px;
   }
-
-  /* Show overlay when menu is open */
   .menu-overlay.active {
     display: block;
   }
