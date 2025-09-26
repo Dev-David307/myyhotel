@@ -309,13 +309,55 @@
 .about-section {
   display: flex;
   width: 100%;
-  min-height: 500px; 
+  min-height: 500px;
 }
 
 .about-text {
   flex: 1;
   padding: 60px;
-  background: #fff; /* same background as section */
+  background: #fff;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  color: #222;
+}
+
+.about-text h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #b78b65; /* accent color */
+  margin-top: 8px;
+}
+
+.about-text p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.about-text .btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #b78b65; 
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-text .btn:hover {
+  background: #9a6f4b; 
+  transform: translateY(-2px);
 }
 
 .about-image {
@@ -324,7 +366,47 @@
   background-size: cover; /* makes image fill without leaving a line */
 }
 
+@media (max-width: 992px) {
+  .about-text {
+    padding: 40px;
+  }
+  .about-text h2 {
+    font-size: 2rem;
+  }
+  .about-text p {
+    font-size: 0.95rem;
+  }
+}
 
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column; /* stack items */
+  }
+
+  .about-text, 
+  .about-image {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .about-text {
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .about-text h2::after {
+    margin: 10px auto; /* center underline */
+  }
+
+  .about-text .btn {
+    margin-top: 15px;
+  }
+
+  .about-image {
+    height: 250px; /* fixed height for background image */
+  }
+}
 
 
 
