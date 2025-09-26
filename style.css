@@ -309,7 +309,7 @@
 .about-section {
   display: flex;
   width: 100%;
-  min-height: 500px; /* adjust height */
+  min-height: 500px; 
 }
 
 .about-text {
