@@ -363,18 +363,16 @@
 .about-image {
   flex: 1;
   background: url("images/01.jpg") no-repeat center center;
-  background-size: cover;
   min-height: 300px;
 }
 
-
 @media (max-width: 992px) {
   .about-section {
-    flex-direction: column-reverse;
+    flex-direction: column; 
   }
 
   .about-image {
-    width: 1000%;
+    width: 100%;
     height: 300px; 
     background-position: center;
     background-size: cover;
@@ -384,11 +382,35 @@
     padding: 40px 20px;
     text-align: center;
   }
+
+    .about-text p {
+    max-width: 100%;      
+    margin: 0 auto 25px; 
+    font-size: 1rem;      
+    line-height: 1.8;     
+    color: #444;         
+  }
+
+    .about-text h2::after {
+    width: 40px;
+    margin: 10px auto;
+  }
+
 }
 
 @media (max-width: 576px) {
   .about-image {
     height: 250px; 
+  }
+
+   .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 0 10px;
+  }
+    .about-text h2::after {
+    width: 30px;
+    margin: 8px auto;
   }
 }
 
