@@ -367,7 +367,29 @@
 }
 
 
+@media (max-width: 992px) {
+  .about-section {
+    flex-direction: column-reverse; /* image first, then text */
+  }
 
+  .about-image {
+    width: 100%;
+    height: 300px; /* make sure the div is tall enough */
+    background-position: center;
+    background-size: cover;
+  }
+
+  .about-text {
+    padding: 40px 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-image {
+    height: 250px; /* smaller phones */
+  }
+}
 
 
 
