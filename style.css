@@ -363,7 +363,7 @@
 .about-image {
   flex: 1;
   background: url("images/01.jpg") no-repeat center center;
-  background-size: cover; /* makes image fill without leaving a line */
+  background-size: cover;
 }
 
 @media (max-width: 992px) {
