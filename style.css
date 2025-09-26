@@ -331,7 +331,7 @@
   display: block;
   width: 50px;
   height: 3px;
-  background: #b78b65; /* accent color */
+  background: #b78b65;
   margin-top: 8px;
 }
 
@@ -365,50 +365,6 @@
   background: url("images/01.jpg") no-repeat center center;
   background-size: cover;
 }
-
-@media (max-width: 992px) {
-  .about-text {
-    padding: 40px;
-  }
-  .about-text h2 {
-    font-size: 2rem;
-  }
-  .about-text p {
-    font-size: 0.95rem;
-  }
-}
-
-/* Mobile (<= 768px) */
-@media (max-width: 768px) {
-  .about-section {
-    flex-direction: column; /* stack items */
-  }
-
-  .about-text, 
-  .about-image {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  .about-text {
-    text-align: center;
-    padding: 30px 20px;
-  }
-
-  .about-text h2::after {
-    margin: 10px auto; /* center underline */
-  }
-
-  .about-text .btn {
-    margin-top: 15px;
-  }
-
-  .about-image {
-    height: 250px; /* fixed height for background image */
-  }
-}
-
-
 
 
 
