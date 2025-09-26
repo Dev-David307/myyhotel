@@ -317,7 +317,7 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 50px; /* nice breathing space between text & image */
+  gap: 50px; 
 }
 
 /* Text Section */
