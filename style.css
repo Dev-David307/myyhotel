@@ -306,52 +306,46 @@
   }
 }
 
-/* Welcome Section */
 .about-us {
-  background: #f9f9f9;
+  background: #fff; /* white clean background */
   padding: 80px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
-/* Container to hold both text and image */
 .about-us .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  width: 100%;
   margin: 0 auto;
+  gap: 50px; /* nice breathing space between text & image */
 }
 
 /* Text Section */
 .text-content {
-  max-width: 600px;
-  padding-left: 40px;
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
 }
 
 .text-content h2 {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 600;
   color: #222;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .text-content .underline {
-  width: 60px;
+  width: 50px;
   height: 3px;
   background: #b28d64;
-  margin: 0 auto 25px auto;
+  margin: 0 0 20px 0;
 }
 
 .text-content p {
   font-size: 16px;
   color: #555;
   line-height: 1.7;
-  max-width: 700px;
-  margin: 0 auto 30px auto;
+  margin-bottom: 25px;
 }
 
 .text-content .btn {
@@ -369,57 +363,60 @@
   background: #9a754f;
 }
 
-/* Image Section */
-.image-content img {
-  width: 100%;
-  height: auto;
-  max-width: 500px;
-  border-radius: 8px; /* Optional: add some border-radius for a smoother look */
+.image-content {
+  flex: 1;
+  text-align: right;
 }
 
-/* Responsiveness for Tablet and Mobile */
+.image-content img {
+  width: 100;
+  height: auto;
+  max-width: 550px;
+  border-radius: 8px;
+}
 
-@media (max-width: 1199px) and (min-width: 768px) {
+
+@media (max-width: 991px) {
   .about-us .container {
-    flex-direction: column; /* Stack the content vertically */
-    text-align: center; /* Ensure text is centered */
+    flex-direction: column;
+    text-align: center;
   }
 
   .text-content {
-    max-width: 700px;
-    padding-left: 0;
-    margin-bottom: 30px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .text-content .underline {
+    margin: 0 auto 20px auto;
   }
 
   .image-content {
-    width: 100%;
+    text-align: center;
   }
 }
 
-@media (max-width: 767px) {
-  .about-us .container {
-    flex-direction: column;  /* Stack vertically on mobile */
-    padding: 20px;
+/* Mobile */
+@media (max-width: 576px) {
+  .about-us {
+    padding: 50px 15px;
   }
 
   .text-content h2 {
-    font-size: 28px;  /* Smaller heading on mobile */
+    font-size: 26px;
   }
 
   .text-content p {
-    font-size: 14px;  /* Adjust paragraph font size for mobile */
-    line-height: 1.5;
-    margin-bottom: 25px;  /* Space between paragraph and button */
+    font-size: 14px;
   }
 
   .text-content .btn {
-    padding: 12px 30px; /* Smaller button padding */
+    padding: 12px 25px;
     font-size: 14px;
   }
 
   .image-content img {
-    width: 100%;  /* Make image responsive */
-    max-width: 400px; /* Adjust image size for mobile */
+    max-width: 350px;
   }
 }
 
