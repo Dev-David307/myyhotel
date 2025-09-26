@@ -364,6 +364,7 @@
   flex: 1;
   background: url("images/01.jpg") no-repeat center center;
   background-size: cover;
+  min-height: 300px;
 }
 
 
