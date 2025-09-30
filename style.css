@@ -579,24 +579,23 @@
   font-size: 1.1rem;
 }
 
-        /* Carousel Dots Styling */
-        .carousel-dots {
-            text-align: center;
-            margin-top: 40px;
-        }
+.carousel-dots {
+  text-align: center;
+  margin-top: 40px;
+}
 
-        .dot {
-            display: inline-block;
-            height: 8px;
-            width: 8px;
-            margin: 0 5px;
-            background-color: #ccc;
-            border-radius: 50%;
-        }
+.dot {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
 
-        .dot.active {
-            background-color: #b78b65; /* Highlight the active dot */
-        }
+ .dot.active {
+  background-color: #b78b65;
+ }
 
 
         /* Styling for the large quote mark (the '66') */
