@@ -567,17 +567,17 @@
   border-bottom: 1px solid #eee;
 }
 
-        .offer-details {
-            font-size: 0.95rem;
-            color: #666;
-            margin: 0;
-        }
+.offer-details {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+}
 
-        .offer-details .icon {
-            margin-right: 8px;
-            color: #b78b65; /* Use the brand color for the icon */
-            font-size: 1.1rem;
-        }
+.offer-details .icon {
+  margin-right: 8px;
+  color: #b78b65; 
+  font-size: 1.1rem;
+}
 
         /* Carousel Dots Styling */
         .carousel-dots {
