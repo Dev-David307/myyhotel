@@ -598,7 +598,7 @@
  }
 
 .quote-text::before {
-            content: "\201C"; /* Left double quotation mark */
+  content: "\201C";
             position: absolute;
             top: -20px;
             left: 0;
