@@ -597,9 +597,7 @@
   background-color: #b78b65;
  }
 
-
-        /* Styling for the large quote mark (the '66') */
-        .quote-text::before {
+.quote-text::before {
             content: "\201C"; /* Left double quotation mark */
             position: absolute;
             top: -20px;
