@@ -545,29 +545,27 @@
   overflow: hidden;
 }
 
-        .offer-image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures image covers the area without distortion */
-            display: block;
-            /* Using placeholder images for demo. Replace with your actual paths. */
-        }
+.offer-image-container img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+}
 
-        /* Content Area Styling */
-        .offer-content {
-            padding: 15px 20px 20px;
-            text-align: left;
-        }
+.offer-content {
+  padding: 15px 20px 20px;
+  text-align: left;
+}
 
-        .offer-title {
-            font-size: 1.2rem;
-            color: #333;
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-weight: 600; /* Bolder title text */
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee; /* The separating line below the title */
-        }
+.offer-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
 
         .offer-details {
             font-size: 0.95rem;
