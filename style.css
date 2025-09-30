@@ -553,50 +553,31 @@
             }
         }
 
-
-
-
-
-
-
-
-        /* --- Media Query for Mobile Responsiveness --- */
 @media (max-width: 650px) {
-    /* Adjust the main container for smaller screens */
-    .room-container {
-        /* Set minimum column size smaller for phones */
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        /* Reduce the gap on smaller screens */
-        gap: 20px;
-        /* Add some general padding to prevent content from touching screen edges */
-        padding: 0 15px; 
-    }
-
-    /* Adjust or remove fixed margins on individual cards for mobile */
-    .room-card1, 
-    .room-card2 {
-        /* Remove the fixed 30px margins on the left/right of the cards
-           when the grid stacks them, to allow them to fit properly. */
-        margin-left: 0;
-        margin-right: 0;
-    }
-    
-    /* Ensure the container's padding is removed if you kept it elsewhere */
-    .room-card1 {
-        margin-left: 0; 
-    }
-    
-    .room-card2 {
-        margin-right: 0;
-    }
-    
-    /* Optional: Slightly reduce image height on very small devices */
-    .room-card1 img, .room-card2 img {
-        height: 250px; 
-    }
+  .room-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 15px; 
 }
 
+.room-card1, 
+.room-card2 {
+   margin-left: 0;
+   margin-right: 0;
+}
+    
+.room-card1 {
+  margin-left: 0; 
+}
+    
+.room-card2 {
+  margin-right: 0;
+}
 
+.room-card1 img, .room-card2 img {
+   height: 250px; 
+}
+}
 
 @media (max-width: 992px) {
   .about-section {
