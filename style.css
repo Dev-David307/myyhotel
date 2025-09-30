@@ -610,21 +610,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 768px) {
   .top-bar {
     flex-direction: column;
@@ -716,7 +701,6 @@
     max-width: 1200px;
   }
 }
-
 
 @media (max-width: 768px) {
   .nav-links {
