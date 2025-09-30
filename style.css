@@ -457,7 +457,7 @@
   background: #9a6e4a;
 }
 
-.carousel-container {
+/* .carousel-container {
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -469,7 +469,7 @@
 }
 
 .carousel-item {
-  width: 100%;  /* Two items visible at a time */
+  width: 100%; 
   padding: 10px;
   box-sizing: border-box;
   transition: transform 0.5s ease-in-out;
@@ -492,7 +492,7 @@
 
 .dot.active {
   background-color: #717171;
-}
+} */
 
 
 
