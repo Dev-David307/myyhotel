@@ -501,53 +501,49 @@
   padding-left: 50px;
  }
 
-   .special-offers-section {
-            padding: 60px 20px;
-            background-color: #f6f6f6; /* Light gray background matching the image */
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
+ .special-offers-section {
+   padding: 60px 20px;
+   background-color: #f6f6f6; 
+   text-align: center;
+   font-family: Arial, sans-serif;
+ }
 
-        /* Section Title Styling */
-        .section-title {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 5px;
-        }
+.section-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
 
-        .title-underline {
-            width: 50px;
-            height: 2px;
-            background-color: #b78b65; /* The subtle brown/tan color from the design */
-            margin: 0 auto 40px auto; /* Centers the line and adds margin below it */
-        }
+.title-underline {
+  width: 50px;
+  height: 2px;
+  background-color: #b78b65; 
+  margin: 0 auto 40px auto; 
+}
 
-        /* Flexbox Container for Cards */
-        .offers-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px; /* Space between the cards */
-            max-width: 1200px;
-            margin: 0 auto; /* Center the container on the page */
-        }
+.offers-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-        /* Individual Card Styling */
-        .offer-card {
-            flex: 1; /* Allows cards to grow and shrink equally */
-            min-width: 250px;
-            background-color: #fff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow around the card */
-            border-radius: 4px; /* Slight rounding on corners */
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
+.offer-card {
+  flex: 1; 
+  min-width: 250px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  border-radius: 4px; 
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
 
-        /* Image Styling */
-        .offer-image-container {
-            height: 250px; /* Fixed height for consistency */
-            overflow: hidden;
-        }
+.offer-image-container {
+  height: 250px;
+  overflow: hidden;
+}
 
         .offer-image-container img {
             width: 100%;
