@@ -522,66 +522,69 @@
   font-style: normal; 
 }
 
+
 @media (max-width: 768px) {
     .testimonial-section {
-        flex-direction: column;
-        /* Add some padding to the whole section for better spacing */
-        padding-top: 20px;
-        padding-bottom: 20px;
-        /* Ensure it takes up the full width without horizontal overflow */
+        /* *** KEY CHANGE: Stacks the content and image containers vertically *** */
+        flex-direction: column; 
+        
+        /* Ensure it fits nicely on the mobile screen */
         width: 100%;
-        margin: 0;
+        margin-top: 20px;
+        padding: 0; 
     }
 
     .testimonial-content-container {
-        /* Text should be centered on mobile for a single block of content */
-        text-align: center;
-        
-        /* Generous padding for breathing room, matching the section's side-padding */
-        padding: 40px 25px; 
-        
-        /* Reset properties for mobile stack */
+        /* Reset flex properties for a column layout */
         flex: unset; 
         width: 100%;
+        
+        /* Adjust padding for a better mobile fit */
+        padding: 40px 25px;
+        
+        /* Center the text block for a clean look on mobile */
+        text-align: center;
     }
     
-    .testimonial-quote {
-        /* Ensure the quote itself is centered within its container */
-        margin: 0 auto;
+    .testimonial-image-container {
+        /* Reset flex properties for a column layout */
+        flex: unset;
+        width: 100%;
+        
+        /* Reduce the image height so it doesn't take up the whole screen */
+        min-height: 250px; 
     }
 
+    /* --- Quote Adjustments for Mobile --- */
+    
     .quote-text {
-        /* Make the quote slightly smaller but still impactful on mobile */
-        font-size: 1.5rem; 
-        line-height: 1.4;
-        /* Remove the large left padding that was needed for the big quote mark on desktop */
-        padding-left: 0; 
+        /* Adjust font size for better reading on small screens */
+        font-size: 1.5rem;
+        
+        /* Remove the left padding and allow the quote to center */
+        padding-left: 0;
     }
     
-    /* Re-position and size the large quote mark for a centered mobile look */
     .quote-text::before {
-        content: "\201C";
-        position: static; /* Allows it to be centered with the text */
-        display: block;   /* Forces it onto its own line */
-        font-size: 4rem;  /* Smaller than desktop, but still prominent */
-        color: #d1b499;   /* Use your soft accent color */
-        margin-bottom: -20px; /* Pull it closer to the text below */
-        text-align: center; /* Center the quote mark itself */
+        /* Change from absolute to static/block so it can be centered above the text */
+        position: static;
+        display: block;
+        
+        /* Center the quote mark itself */
+        text-align: center; 
+        
+        /* Adjust size for mobile impact */
+        font-size: 4rem; 
+        margin-bottom: -10px; /* Pull it slightly closer to the quote text */
     }
 
     .quote-author {
         /* Center the author name */
-        text-align: center; 
-        margin-top: 15px; /* Reduce vertical space slightly */
-    }
-
-    .testimonial-image-container {
-        flex: unset; 
-        width: 100%;
-        /* A more suitable height for a mobile device */
-        min-height: 200px; 
+        text-align: center;
+        margin-top: 15px; 
     }
 }
+
 @media (max-width: 650px) {
   .room-container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
