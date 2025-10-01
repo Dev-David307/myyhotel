@@ -351,139 +351,111 @@
   min-height: 300px;
 }
 
+
+.rooms-section {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light background for the section */
+    text-align: center;
+}
+
 .section-heading {
-  text-align: center;
-  padding: 60px 20px;
-  background: #f7f7f7; 
+    max-width: 800px;
+    margin: 0 auto 40px auto;
 }
 
 .section-heading h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 20px;
-  position: relative;
-  display: inline-block;
-}
-
-.section-heading h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #b78b65;
-  margin: 10px auto 0; 
+    font-size: 2.5rem;
+    color: #1a2430;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .section-heading p {
-  max-width: 700px;
-  margin: 0 auto;
-  color: #666;
-  font-size: 1rem;
-  line-height: 1.6;
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
 }
 
-.room-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-}
+/* ================================================= */
+/* 2. CAROUSEL CONTAINER & MECHANISM */
+/* ================================================= */
 
-.room-card1, .room-card2 {
-  background: #fff;
-  
-  border: 1px solid #eee;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-.room-card1{
-  margin-left: 30px;
-}
-.room-card2{
-  margin-right: 30px;
-}
-
-.room-card1:hover, .room-card2:hover  {
-  transform: translateY(-5px);
-}
-
-.room-card1 img, .room-card2 img{
-  width: 100%;
-  height: 350px;        
-  object-fit: cover;    
-  display: block;       
-  border-radius: 0;      
-}
-
-.room-content {
-  padding: 20px;
-}
-
-.room-content h3 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: #222;
-}
-
-.room-info {
-  margin-bottom: 20px;
-}
-
-.room-info p {
-  margin-bottom: 10px;
-  font-size: 15px;
-  color: #444;
-}
-
-.room-info p i {
-  margin-right: 8px;
-  color: #b78b65;
-}
-
-.room-btn {
-  display: inline-block;
-  background: #b78b65;
-  color: #fff;
-  padding: 12px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-}
-
-.room-btn:hover {
-  background: #9a6e4a;
-}
-
-/* --- Base Container Setup --- */
 .room-container {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 0 auto;
     position: relative; /* Essential for positioning arrows */
     overflow: hidden; /* Hides cards that are off-screen */
 }
 
-/* --- Wrapper for Sliding Content --- */
 .rooms-wrapper {
     display: flex; /* Lines up cards horizontally */
     flex-wrap: nowrap; /* Prevents cards from wrapping */
     transition: transform 0.4s ease-in-out; /* Smooth slide animation */
-    gap: 20px; /* Space between the cards */
+    gap: 30px; /* Space between the cards on desktop */
 }
 
-/* --- Individual Card Styling (Adjust for sliding) --- */
+/* --- Individual Room Card Styling --- */
 .room-card {
-    min-width: calc((100% / 2) - 10px); /* Show two cards, minus gap (20px/2) */
+    /* Calculates space for 2 cards with a 30px gap: (100% / 2) - (30px / 2) */
+    min-width: calc(50% - 15px); 
     flex-shrink: 0; /* Prevents cards from shrinking */
     background: #fff;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     border-radius: 8px;
     overflow: hidden;
+    text-align: left;
 }
 
-/* --- Navigation Button Styling --- */
+.room-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.room-content {
+    padding: 25px;
+}
+
+.room-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.room-info p {
+    font-size: 1rem;
+    color: #777;
+    margin: 8px 0;
+}
+
+.room-info i {
+    margin-right: 10px;
+    color: #a37d65; /* Accent color for icons */
+}
+
+.room-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #a37d65; /* Accent button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.room-btn:hover {
+    background-color: #8b6b55;
+}
+
+/* ================================================= */
+/* 3. NAVIGATION BUTTONS & DOTS */
+/* ================================================= */
+
 .room-nav-btn {
     position: absolute;
     top: 50%;
@@ -497,15 +469,18 @@
     font-size: 20px;
     line-height: 1;
     border-radius: 50%;
+    transition: background 0.3s;
 }
+
 .prev-btn { left: 10px; }
 .next-btn { right: 10px; }
+.room-nav-btn:hover { background: rgba(0, 0, 0, 0.8); }
 
 
-/* --- Dot Styling --- */
-.room-dots {
+/* Dots */
+.carousel-dots.room-dots {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px; /* Space below the cards */
 }
 .room-dots .dot {
     display: inline-block;
@@ -515,43 +490,49 @@
     background-color: #ccc;
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 .room-dots .dot.active {
-    background-color: #b78b65; /* Your accent color */
+    background-color: #a37d65; /* Your accent color */
 }
 
-/* --- Responsive Adjustments for Mobile (Show one card at a time) --- */
 @media (max-width: 768px) {
-    .room-card {
-        min-width: 100%; /* Show one card on smaller screens */
-        margin: 0;
+    /* Section padding adjustment */
+    .rooms-section {
+        padding: 40px 0;
     }
-}
-
-@media (max-width: 650px) {
-  .room-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 0 15px; 
-}
-
-.room-card1, 
-.room-card2 {
-   margin-left: 0;
-   margin-right: 0;
-}
     
-.room-card1 {
-  margin-left: 0; 
-}
-    
-.room-card2 {
-  margin-right: 0;
-}
+    /* Center the heading text */
+    .section-heading {
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
 
-.room-card1 img, .room-card2 img {
-   height: 250px; 
-}
+    /* Remove the gap from the main container to simplify sliding math */
+    .rooms-wrapper {
+        gap: 0;
+    }
+
+    .room-card {
+        /* *** KEY FIX: Force card to take full width for 1-card sliding *** */
+        min-width: 100%; 
+        box-shadow: none; /* Reduce visual noise on small screens */
+    }
+
+    .room-content {
+        padding: 20px 25px; /* Adjust padding */
+    }
+    
+    /* Ensure image container is sized well */
+    .room-card img {
+        height: 200px;
+    }
+    
+    /* Adjust button size for mobile touch */
+    .room-nav-btn {
+        padding: 8px 12px;
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 992px) {
