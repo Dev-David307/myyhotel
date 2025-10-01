@@ -620,30 +620,30 @@
 
 @media (max-width: 768px) {
   .testimonial-section {
-    flex-direction: column; /* Stack the image and text vertically */
+    flex-direction: column;
     width: 100%;
   }
 
-            .testimonial-image-container {
-                min-height: 300px;
-            }
+testimonial-image-container {
+  min-height: 300px;
+}
 
-            .testimonial-content-container {
-                padding: 40px 20px;
-                text-align: center;
-            }
+.testimonial-content-container {
+  padding: 40px 20px;
+  text-align: center;
+}
 
-            .quote-text {
-                font-size: 1.3rem;
-                padding-left: 0;
-                padding-top: 40px; /* Space for quote mark on top */
-            }
+.quote-text {
+  font-size: 1.3rem;
+  padding-left: 0;
+  padding-top: 40px; 
+}
 
-            .quote-text::before {
-                left: 50%; /* Center the quote mark */
-                transform: translateX(-50%);
-            }
-        }
+.quote-text::before {
+  left: 50%; 
+  transform: translateX(-50%);
+  }
+}
 
 @media (max-width: 650px) {
   .room-container {
