@@ -389,9 +389,6 @@
   margin-top: 18px;
 }
 
-/* ================================
-   Room Carousel
-================================ */
 .room-container {
   position: relative;
   max-width: 1200px;
@@ -475,9 +472,6 @@
   transform: translateY(-2px);
 }
 
-/* ================================
-   Carousel Dots
-================================ */
 .carousel-dots {
   text-align: center;
   margin-top: 35px;
@@ -498,11 +492,6 @@
   background: #b78b65;
 }
 
-/* ================================
-   Responsive Layouts
-================================ */
-
-/* Mobile (<576px): 1 card */
 @media (max-width: 575px) {
   .room-card {
     flex: 0 0 100%;
