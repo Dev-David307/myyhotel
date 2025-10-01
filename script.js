@@ -21,5 +21,3 @@ updateBackground();
 
 let currentSection = 0;
 
-
-

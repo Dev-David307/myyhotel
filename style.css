@@ -501,102 +501,6 @@
   padding-left: 50px;
  }
 
- .special-offers-section {
-   padding: 60px 20px;
-   background-color: #f6f6f6; 
-   text-align: center;
-   font-family: Arial, sans-serif;
-}
-
-.section-title {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.title-underline {
-  width: 50px;
-  height: 2px;
-  background-color: #b78b65; 
-  margin: 0 auto 40px auto; 
-}
-
-.offers-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.offer-card {
-  flex: 1; 
-  min-width: 250px;
-  background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-  border-radius: 4px; 
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.offer-image-container {
-  height: 250px;
-  overflow: hidden;
-}
-
-.offer-image-container img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   display: block;
-}
-
-.offer-content {
-  padding: 15px 20px 20px;
-  text-align: left;
-}
-
-.offer-title {
-  font-size: 1.2rem;
-  color: #333;
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: 600;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
-}
-
-.offer-details {
-  font-size: 0.95rem;
-  color: #666;
-  margin: 0;
-}
-
-.offer-details .icon {
-  margin-right: 8px;
-  color: #b78b65; 
-  font-size: 1.1rem;
-}
-
-.carousel-dots {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.dot {
-  display: inline-block;
-  height: 8px;
-  width: 8px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-}
-
- .dot.active {
-  background-color: #b78b65;
- }
-
 .quote-text::before {
   content: "\201C";
   position: absolute;
@@ -911,5 +815,4 @@
     display: flex;
   }
 }
-
 
