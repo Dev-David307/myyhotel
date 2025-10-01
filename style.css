@@ -599,33 +599,30 @@
 
 .quote-text::before {
   content: "\201C";
-            position: absolute;
-            top: -20px;
-            left: 0;
-            font-size: 5rem;
-            color: #a37d65; /* Custom brown/tan color */
-            line-height: 1;
-            font-weight: 700;
-            font-family: inherit; /* Inherit the font for consistency */
-        }
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: 5rem;
+  color: #a37d65; 
+  line-height: 1;
+  font-weight: 700;
+  font-family: inherit;
+}
 
-        /* Author/Footer Styling */
-        .quote-author {
-            display: block;
-            margin-top: 20px;
-            font-size: 1rem;
-            color: #777;
-            text-align: left;
-            /* Match font used for the quote-text, but smaller */
-            font-style: normal; 
-        }
+.quote-author {
+  display: block;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #777;
+  text-align: left;
+  font-style: normal; 
+}
 
-        /* Optional: Make it responsive for smaller screens */
-        @media (max-width: 768px) {
-            .testimonial-section {
-                flex-direction: column; /* Stack the image and text vertically */
-                width: 100%;
-            }
+@media (max-width: 768px) {
+  .testimonial-section {
+    flex-direction: column; /* Stack the image and text vertically */
+    width: 100%;
+  }
 
             .testimonial-image-container {
                 min-height: 300px;
