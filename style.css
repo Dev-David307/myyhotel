@@ -457,131 +457,74 @@
   background: #9a6e4a;
 }
 
-.testimonial-section {
-  display: flex;
-  width: 100vw; 
-  margin-top: 50px;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
-  background-color: white;
+/* --- Base Container Setup --- */
+.room-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    position: relative; /* Essential for positioning arrows */
+    overflow: hidden; /* Hides cards that are off-screen */
 }
 
-.testimonial-image-container {
-  flex: 1;
-  min-height: 400px; 
-  overflow: hidden;
+/* --- Wrapper for Sliding Content --- */
+.rooms-wrapper {
+    display: flex; /* Lines up cards horizontally */
+    flex-wrap: nowrap; /* Prevents cards from wrapping */
+    transition: transform 0.4s ease-in-out; /* Smooth slide animation */
+    gap: 20px; /* Space between the cards */
 }
 
-.testimonial-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+/* --- Individual Card Styling (Adjust for sliding) --- */
+.room-card {
+    min-width: calc((100% / 2) - 10px); /* Show two cards, minus gap (20px/2) */
+    flex-shrink: 0; /* Prevents cards from shrinking */
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.testimonial-content-container {
-  flex: 1; 
-  padding: 60px;
-  display: flex;
-  align-items: center;
+/* --- Navigation Button Styling --- */
+.room-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+    line-height: 1;
+    border-radius: 50%;
+}
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+
+/* --- Dot Styling --- */
+.room-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+.room-dots .dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.room-dots .dot.active {
+    background-color: #b78b65; /* Your accent color */
 }
 
-.testimonial-quote {
-  margin: 0;
-  border: none;
-}
-
-.quote-text {
-  font-size: 1.75rem;
-  line-height: 1.5;
-  color: #444;
-  font-weight: 300;
-  position: relative;
-  padding-left: 50px;
- }
-
-.quote-text::before {
-  content: "\201C";
-  position: absolute;
-  top: -20px;
-  left: 0;
-  font-size: 5rem;
-  color: #a37d65; 
-  line-height: 1;
-  font-weight: 700;
-  font-family: inherit;
-}
-
-.quote-author {
-  display: block;
-  margin-top: 20px;
-  font-size: 1rem;
-  color: #777;
-  text-align: left;
-  font-style: normal; 
-}
-
-
+/* --- Responsive Adjustments for Mobile (Show one card at a time) --- */
 @media (max-width: 768px) {
-    .testimonial-section {
-        /* *** KEY CHANGE: Stacks the content and image containers vertically *** */
-        flex-direction: column; 
-        
-        /* Ensure it fits nicely on the mobile screen */
-        width: 100%;
-        margin-top: 20px;
-        padding: 0; 
-    }
-
-    .testimonial-content-container {
-        /* Reset flex properties for a column layout */
-        flex: unset; 
-        width: 100%;
-        
-        /* Adjust padding for a better mobile fit */
-        padding: 40px 25px;
-        
-        /* Center the text block for a clean look on mobile */
-        text-align: center;
-    }
-    
-    .testimonial-image-container {
-        /* Reset flex properties for a column layout */
-        flex: unset;
-        width: 100%;
-        
-        /* Reduce the image height so it doesn't take up the whole screen */
-        min-height: 250px; 
-    }
-
-    /* --- Quote Adjustments for Mobile --- */
-    
-    .quote-text {
-        /* Adjust font size for better reading on small screens */
-        font-size: 1.5rem;
-        
-        /* Remove the left padding and allow the quote to center */
-        padding-left: 0;
-    }
-    
-    .quote-text::before {
-        /* Change from absolute to static/block so it can be centered above the text */
-        position: static;
-        display: block;
-        
-        /* Center the quote mark itself */
-        text-align: center; 
-        
-        /* Adjust size for mobile impact */
-        font-size: 4rem; 
-        margin-bottom: -10px; /* Pull it slightly closer to the quote text */
-    }
-
-    .quote-author {
-        /* Center the author name */
-        text-align: center;
-        margin-top: 15px; 
+    .room-card {
+        min-width: 100%; /* Show one card on smaller screens */
+        margin: 0;
     }
 }
 
