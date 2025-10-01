@@ -506,7 +506,7 @@
    background-color: #f6f6f6; 
    text-align: center;
    font-family: Arial, sans-serif;
- }
+}
 
 .section-title {
   font-size: 2rem;
@@ -619,32 +619,65 @@
 }
 
 @media (max-width: 768px) {
-  .testimonial-section {
-    flex-direction: column;
-    width: 100%;
-  }
+    .testimonial-section {
+        flex-direction: column;
+        /* Add some padding to the whole section for better spacing */
+        padding-top: 20px;
+        padding-bottom: 20px;
+        /* Ensure it takes up the full width without horizontal overflow */
+        width: 100%;
+        margin: 0;
+    }
 
-testimonial-image-container {
-  min-height: 300px;
+    .testimonial-content-container {
+        /* Text should be centered on mobile for a single block of content */
+        text-align: center;
+        
+        /* Generous padding for breathing room, matching the section's side-padding */
+        padding: 40px 25px; 
+        
+        /* Reset properties for mobile stack */
+        flex: unset; 
+        width: 100%;
+    }
+    
+    .testimonial-quote {
+        /* Ensure the quote itself is centered within its container */
+        margin: 0 auto;
+    }
+
+    .quote-text {
+        /* Make the quote slightly smaller but still impactful on mobile */
+        font-size: 1.5rem; 
+        line-height: 1.4;
+        /* Remove the large left padding that was needed for the big quote mark on desktop */
+        padding-left: 0; 
+    }
+    
+    /* Re-position and size the large quote mark for a centered mobile look */
+    .quote-text::before {
+        content: "\201C";
+        position: static; /* Allows it to be centered with the text */
+        display: block;   /* Forces it onto its own line */
+        font-size: 4rem;  /* Smaller than desktop, but still prominent */
+        color: #d1b499;   /* Use your soft accent color */
+        margin-bottom: -20px; /* Pull it closer to the text below */
+        text-align: center; /* Center the quote mark itself */
+    }
+
+    .quote-author {
+        /* Center the author name */
+        text-align: center; 
+        margin-top: 15px; /* Reduce vertical space slightly */
+    }
+
+    .testimonial-image-container {
+        flex: unset; 
+        width: 100%;
+        /* A more suitable height for a mobile device */
+        min-height: 200px; 
+    }
 }
-
-.testimonial-content-container {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.quote-text {
-  font-size: 1.3rem;
-  padding-left: 0;
-  padding-top: 40px; 
-}
-
-.quote-text::before {
-  left: 50%; 
-  transform: translateX(-50%);
-  }
-}
-
 @media (max-width: 650px) {
   .room-container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
