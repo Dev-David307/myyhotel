@@ -522,6 +522,43 @@
   right: 10px;
 }
 
+@media (max-width: 768px) {
+  .rooms-section {
+    padding: 50px 15px;
+  }
+
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+
+  .section-heading p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .room-card img {
+    height: 200px; /* reduce image height on phones */
+  }
+
+  .room-content {
+    padding: 18px;
+  }
+
+  .room-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .room-btn {
+    display: block;
+    width: 100%;  /* full-width button on mobile */
+    text-align: center;
+  }
+
+  .carousel-dots {
+    margin-top: 18px;
+  }
+}
+
 
 
 @media (max-width: 992px) {
