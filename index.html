@@ -154,7 +154,7 @@
           </div>
         </div>
         <div class="room-card">
-          <img src="images/22.jpg" alt="Presidential Suite">
+          <img src="images/17-1470x920.jpg" alt="Presidential Suite">
           <div class="room-content">
             <h3>Presidential Suite</h3>
             <div class="room-info">
@@ -169,7 +169,7 @@
 
       <div class="room-slide">
         <div class="room-card">
-          <img src="images/44.jpg" alt="Twin Room">
+          <img src="images/Hotel.jpeg" alt="Twin Room">
           <div class="room-content">
             <h3>Twin Room</h3>
             <div class="room-info">
@@ -181,7 +181,7 @@
           </div>
         </div>
         <div class="room-card">
-          <img src="images/55.jpg" alt="Luxury King Room">
+          <img src="images/17-1470x920.jpg" alt="Luxury King Room">
           <div class="room-content">
             <h3>Luxury King Room</h3>
             <div class="room-info">
@@ -196,7 +196,7 @@
 
       <div class="room-slide">
         <div class="room-card">
-          <img src="images/66.jpg" alt="Family Suite">
+          <img src="images/17-1470x920.jpg" alt="Family Suite">
           <div class="room-content">
             <h3>Family Suite</h3>
             <div class="room-info">
@@ -222,6 +222,9 @@
       </div>
 
     </div>
+
+        <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
 
     <div class="carousel-dots room-dots">
       <span class="dot active"></span>
@@ -249,6 +252,75 @@
       menuToggle.textContent = navLinks.classList.contains('active') ? '✖' : '☰';
     });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const wrapper = document.querySelector(".rooms-wrapper");
+  const slides = document.querySelectorAll(".room-slide");
+  const dots = document.querySelectorAll(".dot");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+  const interval = 4000; // 4 seconds autoplay
+  let autoPlay;
+
+  // Show slide function
+  function showSlide(index) {
+    if (index >= totalSlides) index = 0;
+    if (index < 0) index = totalSlides - 1;
+
+    currentIndex = index;
+    wrapper.style.transform = `translateX(-${index * 100}%)`;
+
+    // Update dots
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+
+  // Autoplay function
+  function startAutoplay() {
+    autoPlay = setInterval(() => {
+      showSlide(currentIndex + 1);
+    }, interval);
+  }
+
+  function stopAutoplay() {
+    clearInterval(autoPlay);
+  }
+
+  // Event listeners
+  prevBtn.addEventListener("click", () => {
+    showSlide(currentIndex - 1);
+    stopAutoplay();
+    startAutoplay();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    showSlide(currentIndex + 1);
+    stopAutoplay();
+    startAutoplay();
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      showSlide(i);
+      stopAutoplay();
+      startAutoplay();
+    });
+  });
+
+  // Pause autoplay on hover
+  wrapper.addEventListener("mouseenter", stopAutoplay);
+  wrapper.addEventListener("mouseleave", startAutoplay);
+
+  // Init
+  showSlide(0);
+  startAutoplay();
+});
+</script>
+
 
 
 </body>

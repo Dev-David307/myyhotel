@@ -350,6 +350,7 @@
   background: url("images/01.jpg") no-repeat center center;
   min-height: 300px;
 }
+
 .rooms-section {
   padding: 80px 20px;
   background: #fafafa;
@@ -386,7 +387,6 @@
   line-height: 1.7;
 }
 
-/* Room Container */
 .room-container {
   position: relative;
   overflow: hidden;
@@ -394,22 +394,19 @@
   margin: 0 auto;
 }
 
-/* Wrapper for carousel */
 .rooms-wrapper {
   display: flex;
   transition: transform 0.6s ease-in-out;
   width: 100%;
 }
 
-/* Each slide (holds 2 cards) */
 .room-slide {
+  min-width: 100%; 
   display: flex;
-  flex: 0 0 100%;
-  gap: 25px;
   justify-content: center;
+  gap: 20px;
 }
 
-/* Room Card */
 .room-card {
   background: #fff;
   border-radius: 12px;
@@ -460,7 +457,6 @@
   font-size: 1rem;
 }
 
-/* Button */
 .room-btn {
   display: inline-block;
   padding: 12px 20px;
@@ -478,7 +474,6 @@
   transform: translateY(-2px);
 }
 
-/* Carousel Dots */
 .carousel-dots {
   text-align: center;
   margin-top: 25px;
@@ -500,48 +495,33 @@
   transform: scale(1.2);
 }
 
-@media (max-width: 575px) {
-  .room-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .room-card img {
-    height: 220px;
-  }
-
-  .room-content {
-    text-align: center;
-  }
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s;
 }
 
-/* Tablet (576px - 991px): center 1.5 cards */
-@media (min-width: 576px) and (max-width: 991px) {
-  .rooms-wrapper {
-    justify-content: center;
-  }
-
-  .room-card {
-    flex: 0 0 70%;
-    max-width: 70%;
-  }
-
-  .room-card img {
-    height: 250px;
-  }
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
 }
 
-/* Desktop (≥992px): 2 equal cards */
-@media (min-width: 992px) {
-  .room-card {
-    flex: 0 0 calc(50% - 12.5px);
-    max-width: calc(50% - 12.5px);
-  }
-
-  .room-card img {
-    height: 300px;
-  }
+.carousel-btn.prev {
+  left: 10px;
 }
+
+.carousel-btn.next {
+  right: 10px;
+}
+
 
 
 @media (max-width: 992px) {
