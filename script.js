@@ -19,45 +19,47 @@ prevBtn.addEventListener("click", () => {
 
 updateBackground();
 
-let currentSection = 0;
+let currentRoom = 0;
+const roomCards = document.querySelectorAll('.rooms-wrapper .room-card');
+const roomDots = document.querySelectorAll('.room-dots .dot');
+const totalRooms = roomCards.length;
+const intervalTime = 4000; // autoplay every 4s
+let roomInterval;
 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.carousel-slide img');
-const totalSlides = slides.length;
-const intervalTime = 3000; // 3 seconds
-let slideInterval;
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.style.display = (i === index) ? 'block' : 'none';
+function showRoom(index) {
+  roomCards.forEach((room, i) => {
+    room.style.display = (i === index) ? 'block' : 'none';
+    roomDots[i].classList.toggle('active', i === index);
   });
 }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % totalSlides;
-  showSlide(currentSlide);
+function nextRoom() {
+  currentRoom = (currentRoom + 1) % totalRooms;
+  showRoom(currentRoom);
 }
 
-function prevSlide() {
-  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-  showSlide(currentSlide);
+function startRoomAutoplay() {
+  roomInterval = setInterval(nextRoom, intervalTime);
 }
 
-// Start autoplay
-function startAutoplay() {
-  slideInterval = setInterval(nextSlide, intervalTime);
+function stopRoomAutoplay() {
+  clearInterval(roomInterval);
 }
 
-// Stop autoplay when hovering (optional)
-function stopAutoplay() {
-  clearInterval(slideInterval);
-}
+// Init
+showRoom(currentRoom);
+startRoomAutoplay();
 
-// Initialize
-showSlide(currentSlide);
-startAutoplay();
+// Pause on hover
+document.querySelector('.rooms-section')
+  .addEventListener('mouseenter', stopRoomAutoplay);
+document.querySelector('.rooms-section')
+  .addEventListener('mouseleave', startRoomAutoplay);
 
-// Optional: pause on hover
-const carousel = document.querySelector('.carousel');
-carousel.addEventListener('mouseenter', stopAutoplay);
-carousel.addEventListener('mouseleave', startAutoplay);
+// Dots click
+roomDots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentRoom = index;
+    showRoom(currentRoom);
+  });
+});
