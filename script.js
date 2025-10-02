@@ -21,33 +21,43 @@ updateBackground();
 
 let currentSection = 0;
 
-document.addEventListener("DOMContentLoaded", function () {
-  const wrapper = document.querySelector(".rooms-wrapper");
-  const dots = document.querySelectorAll(".carousel-dots .dot");
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-slide img');
+const totalSlides = slides.length;
+const intervalTime = 3000; // 3 seconds
+let slideInterval;
 
-  let currentIndex = 0;
-
-  function updateCarousel(index) {
-    const card = document.querySelector(".room-card");
-    const cardWidth = card.offsetWidth + 25; // card width + gap
-    wrapper.style.transform = `translateX(-${index * cardWidth}px)`;
-
-    // update dots
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[index].classList.add("active");
-  }
-
-  // dot click
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      currentIndex = index;
-      updateCarousel(currentIndex);
-    });
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.display = (i === index) ? 'block' : 'none';
   });
+}
 
-  // auto slide (optional)
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % dots.length;
-    updateCarousel(currentIndex);
-  }, 5000); // every 5s
-});
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  showSlide(currentSlide);
+}
+
+// Start autoplay
+function startAutoplay() {
+  slideInterval = setInterval(nextSlide, intervalTime);
+}
+
+// Stop autoplay when hovering (optional)
+function stopAutoplay() {
+  clearInterval(slideInterval);
+}
+
+// Initialize
+showSlide(currentSlide);
+startAutoplay();
+
+// Optional: pause on hover
+const carousel = document.querySelector('.carousel');
+carousel.addEventListener('mouseenter', stopAutoplay);
+carousel.addEventListener('mouseleave', startAutoplay);
