@@ -19,47 +19,47 @@ prevBtn.addEventListener("click", () => {
 
 updateBackground();
 
-let currentRoom = 0;
-const roomCards = document.querySelectorAll('.rooms-wrapper .room-card');
-const roomDots = document.querySelectorAll('.room-dots .dot');
-const totalRooms = roomCards.length;
-const intervalTime = 4000; // autoplay every 4s
-let roomInterval;
+let currentSlide = 0;
+const slides = document.querySelectorAll('.rooms-wrapper .room-slide');
+const dots = document.querySelectorAll('.room-dots .dot');
+const totalSlides = slides.length;
+const intervalTime = 4000;
+let slideInterval;
 
-function showRoom(index) {
-  roomCards.forEach((room, i) => {
-    room.style.display = (i === index) ? 'block' : 'none';
-    roomDots[i].classList.toggle('active', i === index);
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.display = (i === index) ? 'flex' : 'none'; // 2 per slide
+    dots[i].classList.toggle('active', i === index);
   });
 }
 
-function nextRoom() {
-  currentRoom = (currentRoom + 1) % totalRooms;
-  showRoom(currentRoom);
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
 }
 
-function startRoomAutoplay() {
-  roomInterval = setInterval(nextRoom, intervalTime);
+function startAutoplay() {
+  slideInterval = setInterval(nextSlide, intervalTime);
 }
 
-function stopRoomAutoplay() {
-  clearInterval(roomInterval);
+function stopAutoplay() {
+  clearInterval(slideInterval);
 }
 
 // Init
-showRoom(currentRoom);
-startRoomAutoplay();
+showSlide(currentSlide);
+startAutoplay();
 
 // Pause on hover
 document.querySelector('.rooms-section')
-  .addEventListener('mouseenter', stopRoomAutoplay);
+  .addEventListener('mouseenter', stopAutoplay);
 document.querySelector('.rooms-section')
-  .addEventListener('mouseleave', startRoomAutoplay);
+  .addEventListener('mouseleave', startAutoplay);
 
 // Dots click
-roomDots.forEach((dot, index) => {
+dots.forEach((dot, index) => {
   dot.addEventListener('click', () => {
-    currentRoom = index;
-    showRoom(currentRoom);
+    currentSlide = index;
+    showSlide(currentSlide);
   });
 });
