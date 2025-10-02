@@ -537,7 +537,7 @@
   }
 
   .room-card img {
-    height: 200px; /* reduce image height on phones */
+    height: 200px;
   }
 
   .room-content {
@@ -550,7 +550,7 @@
 
   .room-btn {
     display: block;
-    width: 100%;  /* full-width button on mobile */
+    width: 100%; 
     text-align: center;
   }
 
@@ -558,8 +558,6 @@
     margin-top: 18px;
   }
 }
-
-
 
 @media (max-width: 992px) {
   .about-section {
