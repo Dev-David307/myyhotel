@@ -602,7 +602,6 @@
   border-radius: 2px;
 }
 
-/* Container */
 .offers-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -611,7 +610,6 @@
   margin: 0 auto;
 }
 
-/* Offer Card */
 .offer-card {
   background: #fff;
   text-align: left;
