@@ -581,6 +581,25 @@
   font-style: italic;
 }
 
+@media (max-width: 992px) {
+  .testimonial-container {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-image {
+    height: 350px;
+  }
+
+  .testimonial-content {
+    padding: 50px 30px;
+    text-align: center;
+  }
+
+  .testimonial-text {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .rooms-section {
     padding: 50px 15px;
