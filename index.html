@@ -307,10 +307,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentIndex = 0;
   const totalSlides = slides.length;
-  const interval = 4000; // 4 seconds autoplay
+  const interval = 4000; 
   let autoPlay;
 
-  // Show slide function
   function showSlide(index) {
     if (index >= totalSlides) index = 0;
     if (index < 0) index = totalSlides - 1;
@@ -318,12 +317,10 @@ document.addEventListener("DOMContentLoaded", () => {
     currentIndex = index;
     wrapper.style.transform = `translateX(-${index * 100}%)`;
 
-    // Update dots
     dots.forEach(dot => dot.classList.remove("active"));
     dots[index].classList.add("active");
   }
 
-  // Autoplay function
   function startAutoplay() {
     autoPlay = setInterval(() => {
       showSlide(currentIndex + 1);
@@ -334,7 +331,6 @@ document.addEventListener("DOMContentLoaded", () => {
     clearInterval(autoPlay);
   }
 
-  // Event listeners
   prevBtn.addEventListener("click", () => {
     showSlide(currentIndex - 1);
     stopAutoplay();
@@ -355,7 +351,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Pause autoplay on hover
   wrapper.addEventListener("mouseenter", stopAutoplay);
   wrapper.addEventListener("mouseleave", startAutoplay);
 
@@ -364,6 +359,22 @@ document.addEventListener("DOMContentLoaded", () => {
   startAutoplay();
 });
 </script>
+
+<script>
+  const cards = document.querySelectorAll('.offer-card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => observer.observe(card));
+</script>
+
 
 
 
