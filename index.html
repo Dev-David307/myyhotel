@@ -378,7 +378,6 @@ document.addEventListener("DOMContentLoaded", () => {
   wrapper.addEventListener("mouseenter", stopAutoplay);
   wrapper.addEventListener("mouseleave", startAutoplay);
 
-  // Init
   showSlide(0);
   startAutoplay();
 });
@@ -397,6 +396,31 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.2 });
 
   cards.forEach(card => observer.observe(card));
+</script>
+
+<script>
+  const openVideo = document.getElementById("openVideo");
+const closeVideo = document.getElementById("closeVideo");
+const videoModal = document.getElementById("videoModal");
+const videoFrame = document.getElementById("videoFrame");
+
+openVideo.addEventListener("click", () => {
+  videoModal.style.display = "flex";
+});
+
+closeVideo.addEventListener("click", () => {
+  videoModal.style.display = "none";
+  // Stop YouTube video playback
+  videoFrame.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === videoModal) {
+    videoModal.style.display = "none";
+    videoFrame.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+  }
+});
+
 </script>
 
 
