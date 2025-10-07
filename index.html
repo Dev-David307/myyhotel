@@ -291,14 +291,19 @@
 <div id="videoModal" class="video-modal">
   <div class="video-container">
     <span class="close-btn" id="closeVideo">&times;</span>
-    <iframe id="videoFrame" width="100%" height="480"
-      src=""
+    <iframe 
+      id="videoFrame" 
+      width="100%" 
+      height="480"
+      src="https://youtu.be/qemqQHaeCYo?si=9RNdUch3YXNxfCVR"
       title="Hotel Video Tour"
       frameborder="0"
       allow="autoplay; encrypted-media"
-      allowfullscreen></iframe>
+      allowfullscreen>
+    </iframe>
   </div>
 </div>
+
 
 
 
@@ -407,7 +412,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const videoFrame = document.getElementById("videoFrame");
 
   // Change this URL to your actual YouTube video link
-  const videoURL = "https://youtu.be/s8vnc9l8sz4?si=43iystL3O8HPVJ7b";
+  const videoURL = "https://youtu.be/qemqQHaeCYo?si=9RNdUch3YXNxfCVR";
 
   openVideo.addEventListener("click", function() {
     videoModal.style.display = "flex";
