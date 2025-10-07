@@ -947,6 +947,7 @@
 }
 
 .footer-bottom {
+  width: 100%;   
   background: #b48b5e;
   color: #fff;
   display: flex;
@@ -955,7 +956,7 @@
   padding: 25px 10%;   
   font-size: 1rem;       
   flex-wrap: wrap;
-  letter-spacing: 0.3px;  
+  box-sizing: border-box;
 }
 
 .footer-currency select {
@@ -971,16 +972,27 @@
 }
 
 @media (max-width: 768px) {
-  .footer-top {
-    flex-direction: column;
-    text-align: left;
-  }
-  .footer-bottom {
+  footer {
     flex-direction: column;
     text-align: center;
+    padding: 40px 5% 15px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
     gap: 10px;
+    padding: 35px 5%; 
+    font-size: 1.1rem;
+    width: 350px;
+  }
+
+@media (max-width: 480px) {
+  .footer-bottom {
+    padding: 50px 5%; 
+    font-size: 1.15rem;
   }
 }
+
 
     @media (max-width: 768px) {
       .facilities-grid {
@@ -1306,5 +1318,6 @@
   .nav-links.active {
     display: flex;
   }
+}
 }
 
