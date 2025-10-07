@@ -400,34 +400,35 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <script>
-  // Select elements
+document.addEventListener("DOMContentLoaded", function() {
+  const openVideo = document.getElementById("openVideo");
+  const closeVideo = document.getElementById("closeVideo");
   const videoModal = document.getElementById("videoModal");
   const videoFrame = document.getElementById("videoFrame");
-  const closeVideo = document.getElementById("closeVideo");
 
-  // Replace YouTube share URL with embed URL
+  // Change this URL to your actual YouTube video link
   const videoURL = "https://youtu.be/qemqQHaeCYo?si=Z1ZnryG2ibW75uM7";
 
-  // Function to open modal
-  function openVideoModal() {
-    videoFrame.src = videoURL;
+  openVideo.addEventListener("click", function() {
     videoModal.style.display = "flex";
-  }
-
-  // Function to close modal
-  function closeVideoModal() {
-    videoFrame.src = "";
-    videoModal.style.display = "none";
-  }
-
-  // Close button click
-  closeVideo.addEventListener("click", closeVideoModal);
-
-  // Close when clicking outside video
-  window.addEventListener("click", (e) => {
-    if (e.target === videoModal) closeVideoModal();
+    videoFrame.src = videoURL + "?autoplay=1";
   });
+
+  closeVideo.addEventListener("click", function() {
+    videoModal.style.display = "none";
+    videoFrame.src = "";
+  });
+
+  // Close modal when clicking outside the video
+  window.addEventListener("click", function(e) {
+    if (e.target === videoModal) {
+      videoModal.style.display = "none";
+      videoFrame.src = "";
+    }
+  });
+});
 </script>
+
 
 
 
