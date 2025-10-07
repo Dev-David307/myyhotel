@@ -394,7 +394,7 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-        observer.unobserve(entry.target); // animate once
+        observer.unobserve(entry.target); 
       }
     });
   }, { threshold: 0.2 });
@@ -410,19 +410,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const videoURL = "https://www.youtube.com/embed/qemqQHaeCYo?autoplay=1";
 
-    // Open modal and load video
     openVideo.addEventListener('click', () => {
       videoModal.style.display = 'flex';
       videoFrame.src = videoUrl;
     });
 
-    // Close modal and stop video
     closeVideo.addEventListener('click', () => {
       videoModal.style.display = 'none';
       videoFrame.src = "";
     });
 
-    // Close modal when clicking outside the video
     window.addEventListener('click', (e) => {
       if (e.target === videoModal) {
         videoModal.style.display = 'none';
