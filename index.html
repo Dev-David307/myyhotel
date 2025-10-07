@@ -302,46 +302,46 @@
   </div>
 
   <section class="facilities-section">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Hotel Facilities</h2>
+    <div class="container">
+      <div class="section-heading">
+        <h2>Hotel Facilities</h2>
+      </div>
+
+      <div class="facilities-grid">
+        <div class="facility">
+          <i class="fas fa-city"></i>
+          <div class="facility-text">
+            <h3>City Views</h3>
+            <p>Proin felis mauris, fermentum non condimentum id, porttitor in nisl curabitur euismod convallis.</p>
+          </div>
+        </div>
+
+        <div class="facility">
+          <i class="fas fa-swimming-pool"></i>
+          <div class="facility-text">
+            <h3>Swimming Pool</h3>
+            <p>Proin felis mauris, fermentum non condimentum id, porttitor in nisl curabitur euismod convallis.</p>
+          </div>
+        </div>
+
+        <div class="facility">
+          <i class="fas fa-compass"></i>
+          <div class="facility-text">
+            <h3>South Facing</h3>
+            <p>Proin felis mauris, fermentum non condimentum id, porttitor in nisl curabitur euismod convallis.</p>
+          </div>
+        </div>
+
+        <div class="facility">
+          <i class="fas fa-subway"></i>
+          <div class="facility-text">
+            <h3>Subway Nearby</h3>
+            <p>Proin felis mauris, fermentum non condimentum id, porttitor in nisl curabitur euismod convallis.</p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="facilities-grid">
-      <div class="facility">
-        <i class="fas fa-city"></i>
-        <div class="facility-text">
-          <h3>City Views</h3>
-          <p>Proin felis mauris, fermentum non condimentum id, porttitor in nisl curabitur euismod convallis.</p>
-        </div>
-      </div>
-
-      <div class="facility">
-        <i class="fas fa-swimming-pool"></i>
-        <div class="facility-text">
-          <h3>Swimming Pool</h3>
-          <p>Proin felis mauris, fermentum non condimentum id, porttitor in nisl curabitur euismod convallis.</p>
-        </div>
-      </div>
-
-      <div class="facility">
-        <i class="fas fa-compass"></i>
-        <div class="facility-text">
-          <h3>South Facing</h3>
-          <p>Proin felis mauris, fermentum non condimentum id, porttitor in nisl curabitur euismod convallis.</p>
-        </div>
-      </div>
-
-      <div class="facility">
-        <i class="fas fa-subway"></i>
-        <div class="facility-text">
-          <h3>Subway Nearby</h3>
-          <p>Proin felis mauris, fermentum non condimentum id, porttitor in nisl curabitur euismod convallis.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -472,6 +472,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 </script>
+
+<script>
+    const facilities = document.querySelectorAll('.facility');
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      facilities.forEach(facility => {
+        const boxTop = facility.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          facility.classList.add('show');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+
 
 
 
