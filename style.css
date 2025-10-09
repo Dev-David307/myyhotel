@@ -109,7 +109,7 @@
 }
 
 .menu-toggle {
-  display: none; /* Don't show the hamburger on large screens */
+  display: none;
 }
 
 .hero {
