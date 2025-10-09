@@ -899,26 +899,44 @@
   margin-right: 10px;
 }
 
+.follow-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Keeps it responsive */
+  gap: 1rem;
+}
+
+/* Left text area */
+.follow-text {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* Right social icons */
 .footer-social {
   display: flex;
-  gap: 15px;
+  align-items: center;
+  gap: 0.8rem;
 }
 
 .footer-social a {
-  background: #b48b5e;
+  background: #b88b5d; /* gold-brown color like in your image */
   color: #fff;
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   font-size: 18px;
   transition: all 0.3s ease;
 }
 
 .footer-social a:hover {
-  background: #9f7a50;
+  background: #a07447;
+  transform: translateY(-3px);
 }
 
 .newsletter {
