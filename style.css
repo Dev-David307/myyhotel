@@ -980,7 +980,7 @@
 .footer-currency select {
   background: transparent;
   border: none;
-  color: #fff;
+  color: black;
   font-weight: 500;
   cursor: pointer;
 }
