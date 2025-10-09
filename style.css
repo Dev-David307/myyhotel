@@ -900,8 +900,9 @@
 }
 
 .footer-social {
-  display: flex;
+  /* display: flex; */
   gap: 15px;
+  display: inline;
 }
 
 .footer-social a {
