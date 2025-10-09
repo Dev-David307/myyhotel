@@ -108,6 +108,10 @@
   font-weight: 500;
 }
 
+.menu-toggle {
+  display: none; /* Don't show the hamburger on large screens */
+}
+
 .hero {
   position: relative;
   height: 90vh;
