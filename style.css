@@ -109,7 +109,7 @@
 }
 
 .nav-links li a:hover {
-  color: #b78b65; /* Change the text color */
+  color: #b78b65;
   transform: translateY(-2px); 
   text-decoration: underline; 
 }
