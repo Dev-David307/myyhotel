@@ -108,6 +108,12 @@
   font-weight: 500;
 }
 
+.nav-links li a:hover {
+  color: #b78b65; /* Change the text color */
+  transform: translateY(-2px); /* Slightly lift the text */
+  text-decoration: underline; /* Underline on hover */
+}
+
 .menu-toggle {
   display: none;
 }
