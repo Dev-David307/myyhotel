@@ -111,7 +111,7 @@
 .nav-links li a:hover {
   color: #b78b65; /* Change the text color */
   transform: translateY(-2px); /* Slightly lift the text */
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline; 
 }
 
 .menu-toggle {
