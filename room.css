@@ -132,7 +132,7 @@
 .page-header .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.65); /* Faded white overlay */
+  background: rgba(255, 255, 255, 0.65); 
 }
 
 .page-header-content {
