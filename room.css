@@ -155,7 +155,6 @@
   border-radius: 2px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .page-header {
     height: 250px;
