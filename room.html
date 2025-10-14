@@ -105,13 +105,67 @@
 </script>
 
 <script>
-  const rooms = [
-  { id: 1, name: "Deluxe King Room", type: "room", price: 450, capacity: 2, size: "40m²", view: "City View", img: "https://images.unsplash.com/photo-1590490359683-658d3d23f972" },
-  { id: 2, name: "Luxury Suite", type: "suite", price: 650, capacity: 3, size: "60m²", view: "Ocean View", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c" },
-  { id: 3, name: "Executive Room", type: "room", price: 520, capacity: 2, size: "45m²", view: "Garden View", img: "https://images.unsplash.com/photo-1560448075-bb485b067938" },
-  { id: 4, name: "Presidential Suite", type: "suite", price: 900, capacity: 4, size: "90m²", view: "Ocean View", img: "https://images.unsplash.com/photo-1611892440504-42a792e24d32" },
-  { id: 5, name: "Standard Room", type: "room", price: 300, capacity: 2, size: "35m²", view: "City View", img: "https://images.unsplash.com/photo-1600585154256-0c4f7a5079a3" },
-  { id: 6, name: "Royal Suite", type: "suite", price: 1000, capacity: 4, size: "100m²", view: "Ocean View", img: "https://images.unsplash.com/photo-1600585153937-1c3f3b22d7c5" }
+const rooms = [
+  {
+    id: 1,
+    name: "Deluxe King Room",
+    type: "room",
+    price: 450,
+    capacity: 2,
+    size: "40m²",
+    view: "City View",
+    img: "https://images.unsplash.com/photo-1600585153937-1c3f3b22d7c5"
+  },
+  {
+    id: 2,
+    name: "Luxury Suite",
+    type: "suite",
+    price: 650,
+    capacity: 3,
+    size: "60m²",
+    view: "Ocean View",
+    img: "https://images.unsplash.com/photo-1600585154256-0c4f7a5079a3"
+  },
+  {
+    id: 3,
+    name: "Executive Room",
+    type: "room",
+    price: 520,
+    capacity: 2,
+    size: "45m²",
+    view: "Garden View",
+    img: "https://images.unsplash.com/photo-1560448075-bb485b067938"
+  },
+  {
+    id: 4,
+    name: "Presidential Suite",
+    type: "suite",
+    price: 900,
+    capacity: 4,
+    size: "90m²",
+    view: "Ocean View",
+    img: "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
+  },
+  {
+    id: 5,
+    name: "Standard Room",
+    type: "room",
+    price: 300,
+    capacity: 2,
+    size: "35m²",
+    view: "City View",
+    img: "https://images.unsplash.com/photo-1590490359683-658d3d23f972"
+  },
+  {
+    id: 6,
+    name: "Royal Suite",
+    type: "suite",
+    price: 1000,
+    capacity: 4,
+    size: "100m²",
+    view: "Ocean View",
+    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+  }
 ];
 
 const roomGrid = document.getElementById("roomGrid");
@@ -162,7 +216,8 @@ pageBtns.forEach(btn => {
   btn.addEventListener("click", () => {
     if (btn.dataset.page === "next") currentPage++;
     else currentPage = parseInt(btn.dataset.page);
-    if (currentPage > Math.ceil(rooms.length / itemsPerPage)) currentPage = 1;
+    const totalPages = Math.ceil(rooms.length / itemsPerPage);
+    if (currentPage > totalPages) currentPage = 1;
     pageBtns.forEach(b => b.classList.remove("active"));
     pageBtns.forEach(b => {
       if (b.dataset.page == currentPage) b.classList.add("active");
@@ -174,6 +229,7 @@ pageBtns.forEach(btn => {
 sortSelect.addEventListener("change", renderRooms);
 
 renderRooms();
+
 
 </script>
 
