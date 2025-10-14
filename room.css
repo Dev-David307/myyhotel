@@ -135,6 +135,108 @@
   margin: 10px auto 0;
   border-radius: 2px;
 }
+
+.rooms-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.room-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filter span {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.filter button {
+  border: none;
+  background: none;
+  padding: 6px 14px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter button.active,
+.filter button:hover {
+  background: #b78b65;
+  color: #fff;
+}
+
+.sort select {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Room Grid */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.room-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+}
+
+.room-image {
+  position: relative;
+}
+
+.room-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.price-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #b78b65;
+  color: #fff;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.room-card h3 {
+  font-size: 20px;
+  margin: 15px 20px 10px;
+}
+
+.room-info {
+  padding: 0 20px 20px;
+  font-size: 15px;
+}
+
+.room-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.room-info span {
+  font-weight: 600;
+  color: #333;
+}
+
 .page-title {
   text-align: center;
   padding: 60px 20px 30px;
