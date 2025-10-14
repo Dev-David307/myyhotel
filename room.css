@@ -269,22 +269,116 @@
   color: #fff;
 }
 
-
-
-
-
-
-@media (max-width: 768px) {
-  .rooms-grid {
-    grid-template-columns: 1fr;
+@media (min-width: 1200px) {
+  .rooms-section {
+    padding: 80px 12%;
   }
 
-  .filter-sort {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+  .room-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .room-card img {
+    height: 260px;
   }
 }
+
+/* --- Medium Screens (Tablets 768px to 1199px) --- */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .filters {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .room-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .room-card img {
+    height: 220px;
+  }
+}
+
+/* --- Small Screens (Phones below 767px) --- */
+@media (max-width: 767px) {
+  .rooms-section {
+    padding: 40px 6%;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .filter-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .sort select {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .room-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .room-card img {
+    height: 200px;
+  }
+
+  .room-info h3 {
+    font-size: 18px;
+  }
+
+  .pagination {
+    margin-top: 30px;
+  }
+
+  .page-btn {
+    padding: 8px 16px;
+    margin: 4px;
+    font-size: 14px;
+  }
+}
+
+/* --- Extra Small Screens (Below 400px) --- */
+@media (max-width: 400px) {
+  .filter-btn {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  .price-badge {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .room-info {
+    padding: 16px;
+  }
+}
+
+
+
+
 
 @media (max-width: 768px) {
   .page-header {
