@@ -177,6 +177,7 @@
   border-radius: 4px;
 }
 
+/* Room Grid */
 .rooms-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -234,103 +235,6 @@
 .room-info span {
   font-weight: 600;
   color: #333;
-}
-
-.filter-sort {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  flex-wrap: wrap;
-}
-
-.filter span {
-  font-weight: 600;
-  margin-right: 10px;
-}
-
-.filter button {
-  background: none;
-  border: none;
-  margin-right: 10px;
-  font-size: 15px;
-  cursor: pointer;
-  color: #555;
-  transition: 0.3s;
-}
-
-.filter button.active,
-.filter button:hover {
-  color: #b78b65;
-  font-weight: 600;
-}
-
-.sort select {
-  padding: 8px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* ROOM GRID */
-.rooms-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  padding: 40px;
-}
-
-.room-card {
-  border: 1px solid #eee;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-
-.room-card:hover {
-  transform: translateY(-5px);
-}
-
-.room-image {
-  position: relative;
-}
-
-.room-image img {
-  width: 100%;
-  display: block;
-  border-bottom: 3px solid #b78b65;
-}
-
-.price-badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #b78b65;
-  color: #fff;
-  padding: 6px 12px;
-  font-size: 14px;
-  border-radius: 2px;
-}
-
-.room-card h3 {
-  margin: 20px;
-  font-size: 20px;
-  color: #333;
-}
-
-.room-info {
-  list-style: none;
-  padding: 0 20px 20px;
-  color: #777;
-}
-
-.room-info li {
-  margin: 5px 0;
-  font-size: 15px;
-}
-
-.room-info i {
-  color: #b78b65;
-  margin-right: 8px;
 }
 
 .page-title {
