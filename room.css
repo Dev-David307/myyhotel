@@ -177,13 +177,11 @@
   border-radius: 4px;
 }
 
-/* Room Grid */
 .rooms-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
-
 .room-card {
   background: #fff;
   border-radius: 10px;
