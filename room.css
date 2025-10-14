@@ -238,6 +238,11 @@
   color: #555;
 }
 
+.room-details i {
+  color: #b78b65;
+  margin-right: 6px;
+}
+
 .pagination {
   margin-top: 40px;
   text-align: center;
