@@ -152,47 +152,45 @@
 }
 
 .rooms-section {
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 20px;
+  padding: 60px 8%;
+  background: #fff;
 }
 
-.room-controls {
+.controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   flex-wrap: wrap;
 }
 
-.filter span {
-  font-weight: 600;
-  margin-right: 10px;
+.filters {
+  display: flex;
+  gap: 15px;
 }
 
-.filter button {
+.filter-btn {
   border: none;
-  background: none;
-  padding: 6px 14px;
-  margin-right: 5px;
-  border-radius: 4px;
+  background: #eee;
+  color: #333;
+  padding: 10px 18px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
-.filter button.active,
-.filter button:hover {
+.filter-btn.active, .filter-btn:hover {
   background: #b78b65;
   color: #fff;
 }
 
 .sort select {
-  padding: 6px 12px;
+  padding: 10px;
+  border-radius: 6px;
   border: 1px solid #ccc;
-  border-radius: 4px;
 }
 
-.rooms-grid {
+.room-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
@@ -202,7 +200,7 @@
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
@@ -210,76 +208,62 @@
   transform: translateY(-5px);
 }
 
-.room-image {
-  position: relative;
-}
-
-.room-image img {
+.room-card img {
   width: 100%;
-  height: 250px;
+  height: 240px;
   object-fit: cover;
 }
 
+.room-info {
+  padding: 20px;
+}
+
 .price-badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
   background: #b78b65;
   color: #fff;
-  padding: 8px 14px;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
   font-size: 14px;
-  border-radius: 4px;
 }
 
-.room-card h3 {
+.room-info h3 {
+  margin: 8px 0;
   font-size: 20px;
-  margin: 15px 20px 10px;
 }
 
-.room-info {
-  padding: 0 20px 20px;
-  font-size: 15px;
-}
-
-.room-info p {
-  margin: 5px 0;
+.room-details {
+  font-size: 14px;
   color: #555;
 }
 
-.room-info span {
-  font-weight: 600;
-  color: #333;
-}
-
 .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin: 40px 0 60px;
+  margin-top: 40px;
+  text-align: center;
 }
 
-.pagination a {
-  display: inline-block;
-  padding: 10px 16px;
+.page-btn {
   border: 1px solid #ccc;
+  background: transparent;
   color: #333;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.pagination a:hover {
-  background-color: #b78b65;
+.page-btn.active {
+  background: #b78b65;
   color: #fff;
-  border-color: #b78b65;
+  border: none;
 }
 
-.pagination a.active {
-  background-color: #b78b65;
+.page-btn:hover {
+  background: #b78b65;
   color: #fff;
-  border-color: #b78b65;
 }
+
 
 
 
