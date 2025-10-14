@@ -269,22 +269,7 @@
   color: #fff;
 }
 
-@media (min-width: 1200px) {
-  .rooms-section {
-    padding: 80px 12%;
-  }
 
-  .room-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-  }
-
-  .room-card img {
-    height: 260px;
-  }
-}
-
-/* --- Medium Screens (Tablets 768px to 1199px) --- */
 @media (max-width: 1199px) and (min-width: 768px) {
   .controls {
     flex-direction: column;
@@ -307,22 +292,21 @@
   }
 }
 
-/* --- Small Screens (Phones below 767px) --- */
 @media (max-width: 767px) {
   .rooms-section {
     padding: 40px 6%;
   }
 
-  .controls {
+ .controls {
     flex-direction: column;
     align-items: stretch;
+    text-align: center;
     gap: 20px;
   }
 
   .filters {
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    width: 100%;
   }
 
   .filter-btn {
@@ -330,9 +314,23 @@
     font-size: 14px;
   }
 
-  .sort select {
+    .sort {
+    justify-content: center;
     width: 100%;
-    padding: 12px;
+  }
+
+  .sort select {
+    width: 80%;
+    max-width: 280px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .sort label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #444;
   }
 
   .room-grid {
@@ -359,7 +357,6 @@
   }
 }
 
-/* --- Extra Small Screens (Below 400px) --- */
 @media (max-width: 400px) {
   .filter-btn {
     flex: 1 1 45%;
