@@ -88,7 +88,7 @@ header {
 }
 
 /* Dropdown menu */
-.dropdown-menu {
+/* .dropdown-menu {
   display: none;
   position: absolute;
   background: #fff;
@@ -120,7 +120,7 @@ header {
 
 .dropdown:hover .dropdown-menu {
   display: block;
-}
+} */
 
 /* Hamburger menu */
 .menu-toggle {
