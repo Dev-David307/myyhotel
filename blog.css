@@ -110,7 +110,10 @@
 }
 
 .menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
   display: none;
+  color: #333;
 }
 
 .dropdown-menu {
