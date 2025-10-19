@@ -135,9 +135,10 @@
   width: 100%;
 }
 
+
 .dropdown-menu li a {
   display: block;
-  padding: 10px 18px;
+  padding: 10px 16px;
   color: #333;
   font-weight: 400;
 }
