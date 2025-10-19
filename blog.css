@@ -105,10 +105,9 @@
   transition: 0.3s;
 }
 
-.nav-links li a:hover {
+.nav-links li a:hover,
+.nav-links li a.active {
   color: #b78b65;
-  transform: translateY(-2px); 
-  text-decoration: underline; 
 }
 
 .menu-toggle {
