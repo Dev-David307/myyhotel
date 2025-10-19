@@ -52,6 +52,17 @@
   z-index: 900;
 }
 
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -68,17 +79,6 @@
   font-size: 24px;
   font-weight: 700;
   color: #333;
-}
-
-.left-nav {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.navbar h2 {
-  font-size: 20px;
-  font-weight: 700;
 }
 
 .navbar .logo {
@@ -176,7 +176,7 @@
   .nav-links.active {
     display: flex;
   }
-  
+
   .nav-links li {
     width: 100%;
   }
