@@ -174,7 +174,7 @@
   }
 
   .nav-links.active {
-    right: 0;
+    display: flex;
   }
 
   .dropdown-menu {
