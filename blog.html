@@ -53,17 +53,10 @@
 <script>
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
-const overlay = document.getElementById("menu-overlay");
 const dropdowns = document.querySelectorAll(".dropdown");
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
-  overlay.classList.toggle("active");
-});
-
-overlay.addEventListener("click", () => {
-  navLinks.classList.remove("active");
-  overlay.classList.remove("active");
 });
 
 dropdowns.forEach(drop => {
@@ -75,6 +68,7 @@ dropdowns.forEach(drop => {
   });
 });
 </script>
+
 
 </body>
 </html>
