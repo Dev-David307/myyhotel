@@ -49,6 +49,32 @@
    
     
 
-    
+<script src="blog.js"></script>
+<script>
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const overlay = document.getElementById("menu-overlay");
+const dropdowns = document.querySelectorAll(".dropdown");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+  navLinks.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
+dropdowns.forEach(drop => {
+  drop.addEventListener("click", (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      drop.classList.toggle("open");
+    }
+  });
+});
+</script>
+
 </body>
 </html>
