@@ -89,6 +89,7 @@
 .nav-links li a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
   transition: 0.3s;
 }
 
@@ -131,9 +132,11 @@
 /* ===== Hamburger ===== */
 .menu-toggle {
   display: none;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   cursor: pointer;
+  color: white;
 }
+
 
 
 
