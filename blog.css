@@ -194,9 +194,10 @@
   }
 
   .nav-links li a {
-    font-size: 18px;
     display: block;
-    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+    color: #333;
   }
 }
 
