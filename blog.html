@@ -51,23 +51,21 @@
 
 <script src="blog.js"></script>
 <script>
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-const dropdowns = document.querySelectorAll(".dropdown");
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const dropdown = document.querySelector('.dropdown');
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
 
-dropdowns.forEach(drop => {
-  drop.addEventListener("click", (e) => {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      drop.classList.toggle("open");
-    }
-  });
+// Toggle dropdown on mobile
+dropdown.addEventListener('click', (e) => {
+  e.stopPropagation();
+  dropdown.classList.toggle('open');
 });
 </script>
+
 
 
 </body>
