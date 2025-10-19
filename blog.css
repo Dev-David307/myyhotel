@@ -181,9 +181,8 @@
     position: static;
     box-shadow: none;
     border-radius: 0;
-    background: none;
+    padding-left: 15px;
     display: none;
-    padding: 0;
   }
 
   .dropdown.open .dropdown-menu {
