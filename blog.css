@@ -121,10 +121,10 @@
   display: none;
   position: absolute;
   background: #fff;
-  list-style: none;
   top: 40px;
   left: 0;
-  min-width: 150px;
+  min-width: 160px;
+  list-style: none;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   border-radius: 6px;
   padding: 10px 0;
