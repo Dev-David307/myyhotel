@@ -50,6 +50,23 @@
     
 
 <script src="blog.js"></script>
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const dropdowns = document.querySelectorAll('.dropdown');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+dropdowns.forEach(drop => {
+  drop.addEventListener('click', (e) => {
+    e.stopPropagation();
+    drop.classList.toggle('active');
+  });
+});
+</script>
+
 
 
 
