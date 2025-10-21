@@ -148,7 +148,7 @@
   position: relative;
   height: 60vh; 
   background: url('images/img2.jpeg') center/cover no-repeat;
-  filter: grayscale(100%); /* Apply the grayscale effect */
+  filter: grayscale(100%); 
   display: flex;
   justify-content: center;
   align-items: center;
