@@ -179,7 +179,7 @@
 .underline {
   width: 80px;
   height: 3px;
-  background: #b78b65; /* Color for the underline */
+  background: #b78b65; 
   margin: 10px auto 0;
 }
 
