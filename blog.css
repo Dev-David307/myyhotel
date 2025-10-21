@@ -147,7 +147,7 @@
 .hero-blog {
   position: relative;
   height: 40vh; /* Reduced height */
-  background: url('images/img1.jpg') center/cover no-repeat; /* Add your image path here */
+  background: url('images/img1.jpg') center/cover no-repeat; 
   filter: grayscale(100%); /* Apply the grayscale effect */
   display: flex;
   justify-content: center;
