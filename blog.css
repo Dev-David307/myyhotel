@@ -144,10 +144,9 @@
   display: none;
 }
 
-/* Hero Section */
 .hero-blog {
   position: relative;
-  height: 60vh; /* Adjust to your preference */
+  height: 60vh; 
   background: url('images/img2.jpeg') center/cover no-repeat; /* Add your image path here */
   filter: grayscale(100%); /* Apply the grayscale effect */
   display: flex;
