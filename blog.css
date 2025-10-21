@@ -148,6 +148,34 @@
 
 
 @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .nav-links.active {
+    display: flex; 
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: black;
+  }
+
   .dropdown-menu {
     position: static;
     background: white;
