@@ -148,36 +148,6 @@
 
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    background: white;
-    padding: 15px 0;
-    border-top: 1px solid #ddd;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: left;
-    padding: 12px 25px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .nav-links li a {
-    color: #000;
-  }
-
   .dropdown-menu {
     position: static;
     background: white;
