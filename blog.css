@@ -205,6 +205,11 @@
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
+.featured-img:hover {
+  transform: scale(1.01);
+  transition: 0.3s ease;
+}
+
 .post-title {
   font-size: 30px;
   font-weight: 700;
