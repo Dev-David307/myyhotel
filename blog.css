@@ -196,14 +196,15 @@
 
 .featured-img {
   display: block;
-  width: 60%;
-  max-width: 700px;
+  width: 80%;
+  max-width: 900px;
+  height: 400px; /* makes it wide and not too tall */
+  object-fit: cover; /* crops neatly without stretching */
   margin: 40px auto;
   border-radius: 10px;
-  object-fit: cover;
-  height: auto;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+
 
 .featured-img:hover {
   transform: scale(1.01);
