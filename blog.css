@@ -182,12 +182,15 @@
   background: black;
   margin: 10px auto 0;
 }
+.hr{
+  margin-bottom: 10px;
+}
 
 .blog-card {
   max-width: 850px;
   margin: 40px auto;
   background: #fff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  /* box-shadow: 0 4px 15px rgba(0,0,0,0.05); */
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;
