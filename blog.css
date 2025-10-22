@@ -198,8 +198,8 @@
   display: block;
   width: 80%;
   max-width: 900px;
-  height: 400px; /* makes it wide and not too tall */
-  object-fit: cover; /* crops neatly without stretching */
+  height: 400px; 
+  object-fit: cover; 
   margin: 40px auto;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
