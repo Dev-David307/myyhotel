@@ -201,7 +201,6 @@
   height: 400px; /* makes it wide and not too tall */
   object-fit: cover; /* crops neatly without stretching */
   margin: 40px auto;
-  border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
