@@ -147,7 +147,7 @@
 .hero-blog {
   position: relative;
   height: 60vh; 
-  background: url('images/img1.jpg') center/cover no-repeat; 
+  background: url('images/05.jpg') center/cover no-repeat; 
   filter: grayscale(100%);
   display: flex;
   justify-content: center;
