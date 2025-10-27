@@ -165,8 +165,6 @@
   backdrop-filter: blur(1px); /* gentle softening effect */
 }
 
-
-
 .blog-header-content {
   position: relative;
   z-index: 1;
