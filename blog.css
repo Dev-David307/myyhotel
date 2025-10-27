@@ -217,13 +217,17 @@
 }
 
 .meta {
+  display: flex;
+  flex-wrap: wrap; /* allows items to move to a new line */
+  gap: 10px; /* spacing between items */
   font-size: 14px;
-  color: #b8906c;
-  margin-bottom: 15px;
+  color: #b47b45; /* your brownish color */
 }
 
 .meta span {
-  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .blog-content p {
