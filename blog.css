@@ -379,7 +379,7 @@
 .footer-currency select {
   background: transparent;
   border: none;
-  color: white;
+  color: black;
   font-weight: 500;
   cursor: pointer;
 }
