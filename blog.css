@@ -402,6 +402,7 @@
     font-size: 1.1rem;
     width: 100vw;
   }
+}
 
 @media (max-width: 480px) {
   .footer-bottom {
@@ -409,7 +410,7 @@
     font-size: 1.15rem;
   }
 }
-}
+
 
 @media (max-width: 576px) {
   .meta {
