@@ -1010,6 +1010,11 @@
     width: 100vw;
   }
 
+    .footer-social {
+    justify-content: center;
+  }
+
+
 @media (max-width: 480px) {
   .footer-bottom {
     padding: 30px 5%; 
