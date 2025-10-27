@@ -250,6 +250,167 @@
   background: #a27855;
 }
 
+  .hotel-footer {
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 80px 8%;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.footer-section ul li i {
+  color: #b48b5e;
+  margin-right: 10px;
+}
+
+.follow-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.follow-text {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer-social a {
+  background: #b88b5d; 
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: #a07447;
+  transform: translateY(-3px);
+}
+
+.newsletter {
+  display: flex;
+  margin-top: 10px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #b48b5e;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.newsletter button {
+  background: #b48b5e;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.newsletter button:hover {
+  background: #9f7a50;
+}
+
+.footer-bottom {
+  width: 100%;   
+  background: #b48b5e;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 10%;   
+  font-size: 1rem;       
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.footer-currency select {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.footer-currency select:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    height: fit-content;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 5%; 
+    font-size: 1.1rem;
+    width: 100vw;
+  }
+
+@media (max-width: 480px) {
+  .footer-bottom {
+    padding: 30px 5%; 
+    font-size: 1.15rem;
+  }
+}
+}
+
 @media (max-width: 576px) {
   .meta {
     flex-direction: column;
