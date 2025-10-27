@@ -1017,7 +1017,6 @@
   }
 }
 
-
     @media (max-width: 768px) {
       .facilities-grid {
         grid-template-columns: 1fr;
