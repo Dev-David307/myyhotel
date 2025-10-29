@@ -20,8 +20,8 @@
       font-size: 14px;
     }
 
-    .top-bar .left,
-    .top-bar .right {
+.top-bar .left,
+  .top-bar .right {
       display: flex;
       gap: 20px;
       align-items: center;
