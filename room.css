@@ -32,9 +32,9 @@
       color: #b28d64;
     }
 
-    .top-bar .book-btn {
-      background: #b28d64;
-      color: #fff;
+.top-bar .book-btn {
+  background: #b28d64;
+  color: #fff;
   padding: 8px 18px;
   border-radius: 3px;
   text-decoration: none;
