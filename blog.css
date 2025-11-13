@@ -24,7 +24,7 @@
     .top-bar .right {
       display: flex;
       gap: 20px;
-      align-items: center;
+  align-items: center;
 }
 
 .top-bar i {
