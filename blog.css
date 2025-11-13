@@ -257,7 +257,6 @@
   color: #fff;
 }
 
-/* RESPONSIVENESS */
 @media (max-width: 768px) {
   .blog-header h1 {
     font-size: 32px;
